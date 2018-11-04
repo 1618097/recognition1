@@ -19,7 +19,7 @@ public class Recognition1_lib {
 	public Recognition1_lib() {
 		service = new VisualRecognition("2018-03-19");
 		iamOptions = new IamOptions.Builder()
-		  .apiKey("GfONvmQN0oReyT9Nc8Yk3n30lgC5RxsGDZVGZ2f_fCWB")
+		  .apiKey("1618097")
 		  .build();
 		service.setIamCredentials(iamOptions);
 	}
