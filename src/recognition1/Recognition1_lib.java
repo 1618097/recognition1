@@ -44,9 +44,11 @@ public class Recognition1_lib {
 		// TODO Auto-generated method stub
 		//===json
 		ObjectMapper mapper = new ObjectMapper();
+		MySQL mysql = new MySQL();
 		JsonNode node = null;
 		try {
 			node = mapper.readTree(String.valueOf(result));
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -62,7 +64,7 @@ public class Recognition1_lib {
 		}
 		double gender_score = node.get("images").get(0).get("faces").get(0).get("gender").get("score").doubleValue();
 		 System.out.println("age_min : " + age_min);
-
+		 mysql.updateImage(age_min, age_max, age_score, gender, gender_score);
 	}
 
 
